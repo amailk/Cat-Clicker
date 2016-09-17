@@ -1,11 +1,10 @@
 var clicks = [0, 0, 0 , 0 , 0];
 function onClick(cat) {
-    clicks[cat] += 1;
-    document.getElementById("counter1").innerHTML = clicks[0];
-    document.getElementById("counter2").innerHTML = clicks[1];
-    document.getElementById("counter3").innerHTML = clicks[2];
-    document.getElementById("counter4").innerHTML = clicks[3];
-    document.getElementById("counter5").innerHTML = clicks[4];
+  clicks[cat] += 1;
+  for (i=0; i < 5; i ++) {
+    var id = "counter" + i;
+    document.getElementById(id).innerHTML = clicks[i];
+  }
 };
 
 $(document).ready(function() {
